@@ -32,9 +32,11 @@
 - `site:linkedin.com/in/ AND "Name of Target" AND "New York" AND "Cyber Security" AND "IBM" AND "Cyber Security Analyst"` (city, job, company, job title)
 -  `site:linkedin.com/in/ AND "Name of Target" AND "New York" AND "Cyber Security" AND "IBM" AND "Cyber Security Analyst" AND "University of Oxford"` (city, job, company, job title, university)
 -  `site:linkedin.com/in/ AND "Name of Target" AND "New York" AND "Cyber Security" AND "IBM" AND "Cyber Security Analyst" AND "University of Oxford" AND "2019..2020"` (city, job, company, job title, university, year)
+  
 ![img](./imgs/Screenshot%20from%202023-11-24%2023-25-22.png)
 
 ## OSINT Using GIT
 - `"https://api.github.com/search/users?q=YOUR_TARGET_EMAIL"`
 - follow this link: https://stateful.com/blog/github-search-api 
+
 ![img](./imgs/Screenshot%20from%202023-11-25%2000-23-13.png)
