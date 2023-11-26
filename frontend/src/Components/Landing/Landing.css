@@ -1,0 +1,98 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 1rem;
+    margin-left: 14rem;
+    position: absolute;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Mostwasted', sans-serif;
+}
+
+.content .main-heading {
+    font-size: 100px;
+}
+
+.content h1 {
+    font-size: 100px;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.word .menu {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wheel {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 5rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    opacity: 0;
+    animation: appear 0.5s ease-in-out 11s forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wheel button {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+#option1{
+    background-image: url('../../Resources/Images/wheel.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option2{
+    background-image: url('../../Resources/Images/aboutus.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option3{
+    background-image: url('../../Resources/Images/performance.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option4{
+    background-image: url('../../Resources/Images/search.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
