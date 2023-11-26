@@ -1,0 +1,8 @@
+Primary Color: Dark Racing Green (#1E352F)
+
+Secondary Color: Fiery Red (#FF0000)
+
+Accent Color: Electric Blue (#007ACC)
+
+Neutral Color: Gunmetal Gray (#848484)
+
