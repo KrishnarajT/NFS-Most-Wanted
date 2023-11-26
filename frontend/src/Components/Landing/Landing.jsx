@@ -10,6 +10,7 @@ const Landing = () => {
         <h1 className="main-heading">NFS</h1>
         <h1>MOST WANTED</h1>
         <div className="word"></div>
+
         <div className="menu">
           <button className="wheel" id="option4"></button>
           <button className="wheel" id="option2"></button>
