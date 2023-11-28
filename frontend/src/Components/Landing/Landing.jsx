@@ -16,9 +16,7 @@ const Landing = () => {
         <h1 className="main-heading">NFS</h1>
         <h2 className="desc">Need For Security</h2>
         <h1>MOST WANTED</h1>
-        <div className="word"></div>
-
-        <div className="menu">
+        <div className="word">
           <button
             className="wheel"
             onClick={() => handleButtonClick("/Search")}
@@ -35,7 +33,7 @@ const Landing = () => {
             id="option1"
           ></button>
           <button
-            className="wheel"
+            className="wheel "
             onClick={() => handleButtonClick("/Features")}
             id="option3"
           ></button>
@@ -43,7 +41,7 @@ const Landing = () => {
             <span>Search</span>
             <span> About us</span>
             <span> Vision</span>
-            <span id="lastopt"> Key Features</span>
+            <span> Key Features</span>
           </div>
         </div>
       </div>
