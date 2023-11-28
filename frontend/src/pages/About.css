@@ -1,0 +1,70 @@
+.Devscard{
+    margin-bottom:4rem;
+}
+
+.about{
+    position: relative; 
+
+}
+.about section {
+    margin-top: 2rem;
+    width: 100%;
+    /*   skew adds a 4.76 degree slope and the translateY equation is based on the fact that a 4.76 degree slope has a gradient of 1:12 */
+    -webkit-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+        -ms-transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+            transform: skew(0, -4.76deg) translateY(calc(50vw/-12));
+    /*   And finally we account for the slope to make sure each section can occupy the full window... I added 10vw just to give it a little extra padding */
+    height: 100vh;
+}
+  
+  .about  section:not(:last-child) *{
+    -webkit-transform: skew(0, 4.76deg) translateY(calc(100vw/12));
+        -ms-transform: skew(0, 4.76deg) translateY(calc(100vw/12));
+            transform: skew(0, 4.76deg) translateY(calc(100vw/12));
+    margin-top: calc(50vw/-12);
+  }
+    
+  .about section:last-child {
+    position: relative;
+    -webkit-transform: skew(0);
+        -ms-transform: skew(0);
+            transform: skew(0);
+    margin-top: calc(100vw/-12);
+    padding-top: calc(100vw/12);
+    min-height: 100vh;
+    z-index: -1;
+  }
+  
+  
+  
+  
+  
+  /* COLORS AND OTHER STYLES TO ILLUSTRATE SECTIONS */
+  .about section:nth-child(1) {
+    background-color: 	#605052;
+  }
+  .about section:nth-child(2) {
+    background-color: #2e242c;
+  }
+  .about  section:nth-child(3) {
+    background-color: #211a23;
+  }
+  .about section:nth-child(4) {
+    background-color:#110c11;
+  }
+  .about section:nth-child(5) {
+    background-color: 	#000000
+  }
+  
+ .about section{
+    display: flex;
+    justify-content: center;
+  }
+  .about h1{
+    font-family: "Audiowide", cursive;
+    color: #fff;
+    background-color: transparent;
+    font-size:32px;
+    margin-top:2rem;
+
+  }

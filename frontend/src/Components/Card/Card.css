@@ -4,7 +4,7 @@
   width: 250px;
   height: 350px;
   background: #fff;
-  margin-top: 8rem;
+  margin-top: 4rem;
   margin-right: 4rem;
   margin-left:4rem;
   border-radius: 4px;
@@ -94,5 +94,13 @@
   margin-top: 1.5rem;
   margin-left: 6.4rem;
   margin-right: 7rem;
-  border:3px solid white
+  border:2px solid white;
+  margin-bottom:4rem;
+}
+
+.dev-heading{
+  color:white;
+  font-family: "Audiowide", cursive;
+  margin-top:4rem;
+  margin-left: 35rem;
 }

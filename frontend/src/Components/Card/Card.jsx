@@ -12,6 +12,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 const Card = () => {
   return (
     <div>
+      <h1 className="dev-heading">THE DEVELOPER TEAM</h1>
       <div className="devs">
         <div className="card">
           <div className="imgBx">
@@ -67,7 +68,7 @@ const Card = () => {
           <a href="/">
             <FaSquarePhone size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://github.com/KrishnarajT">
             <FaGithub size="2.5rem" color="white" />
           </a>
           <a href="/">
