@@ -11,7 +11,9 @@ const Wheel = () => {
   return (
     <div>
       <div className="menu">
-        <span className="navheading">NFS MOST-WANTED</span>
+        <a className="navheading" href="/">
+          NFS MOST-WANTED
+        </a>
         <div className="menuopt">
           <button
             className="wheel1"
