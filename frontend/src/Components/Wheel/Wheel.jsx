@@ -21,7 +21,9 @@ const Wheel = () => {
             id="option4"
           ></button>
           <div>
-            <span className="rise">Search</span>
+            <a className="rise" href="/Search">
+              Search
+            </a>
           </div>
         </div>
         <div className="menuopt">
@@ -31,7 +33,9 @@ const Wheel = () => {
             id="option2"
           ></button>
           <div>
-            <span className="rise">About Us</span>
+            <a className="rise" href="/About_us">
+              About Us
+            </a>
           </div>
         </div>
         <div className="menuopt">
@@ -41,7 +45,9 @@ const Wheel = () => {
             id="option1"
           ></button>
           <div>
-            <span className="rise">Vision</span>
+            <a className="rise" href="/Vision">
+              Vision
+            </a>
           </div>
         </div>
         <div className="menuopt">
@@ -51,7 +57,9 @@ const Wheel = () => {
             id="option3"
           ></button>
           <div>
-            <span className="rise">Performance</span>
+            <a className="rise" href="Features">
+              Performance
+            </a>
           </div>
         </div>
       </div>
