@@ -1,35 +1,48 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import vid from "../../Resources/Videos/bgvid.mp4";
 import "../Landing/Landing.css";
-var words = [
-    "N F S",
-    "NEED FOR SECURITY",
-    "Check for Your Digital Footprint",
-    "Stay safe Because",
-    "Privacy is a myth",
-  ],
-  part,
-  i = 0,
-  offset = 0,
-  len = words.length,
-  forwards = true,
-  skip_count = 0,
-  skip_delay = 15,
-  speed = 70;
-
 const Landing = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="bg">
       <video src={vid} autoPlay muted />
       <div className="content">
         <h1 className="main-heading">NFS</h1>
+        <h2 className="desc">Need For Security</h2>
         <h1>MOST WANTED</h1>
-        <div className="word"></div>
-        <div className="menu">
-          <button className="wheel" id="option1"></button>
-          <button className="wheel" id="option2"></button>
-          <button className="wheel" id="option3"></button>
-          <button className="wheel" id="option4"></button>
+        <div className="word">
+          <button
+            className="wheel"
+            onClick={() => handleButtonClick("/Search")}
+            id="option4"
+          ></button>
+          <button
+            className="wheel"
+            onClick={() => handleButtonClick("/About_us")}
+            id="option2"
+          ></button>
+          <button
+            className="wheel"
+            onClick={() => handleButtonClick("/Vision")}
+            id="option1"
+          ></button>
+          <button
+            className="wheel "
+            onClick={() => handleButtonClick("/Features")}
+            id="option3"
+          ></button>
+          <div className="Options rise">
+            <span>Search</span>
+            <span> About us</span>
+            <span> Vision</span>
+            <span> Key Features</span>
+          </div>
         </div>
       </div>
     </div>
