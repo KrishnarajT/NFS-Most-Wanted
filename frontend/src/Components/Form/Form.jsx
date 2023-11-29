@@ -1,62 +1,154 @@
-import React from "react";
-import "./Form.css";
+// Form.jsx
 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Form.css";
+import "../Button/Button.css";
+import Button from "../Button/Button";
 const Form = () => {
+  const navigate = useNavigate();
+
+  // State to store form data
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    workplace: "",
+    city: "",
+    github: "",
+  });
+
+  // State to manage form errors
+  const [formErrors, setFormErrors] = useState({});
+
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    // Clear error for the current field when the user starts typing
+    setFormErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+  };
+
+  // Validate the form
+  const validateForm = () => {
+    const errors = {};
+    // Check if required fields are empty
+    Object.keys(formData).forEach((key) => {
+      if (!formData[key]) {
+        errors[key] = "This field is required";
+      }
+    });
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0; // Form is valid if no errors
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Validate the form
+    if (validateForm()) {
+      // Access the form data in the 'formData' state variable
+      console.log("Form Data:", formData);
+      // Add logic to send data to the server or perform other actions
+
+      // Redirect to "/summary" after successful form submission
+      navigate("/summary");
+    } else {
+      console.log("Form is not valid. Please check the errors.");
+    }
+  };
+
   return (
     <div className="formbody">
       <div className="formcontainer">
         <div className="text">Contact us Form</div>
-        <form className="form" action="#">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="input-data">
-              <input type="text" required placeholder="Enter your First Name" />
+              <input
+                type="text"
+                name="first_name"
+                value={formData.first_name}
+                onChange={handleInputChange}
+                required
+                placeholder="Enter your First Name"
+              />
               <div className="underline"></div>
-              <label htmlFor="" className="formlabel"></label>
+              <label htmlFor="first_name" className="formlabel"></label>
+              <div className="error-message">{formErrors.first_name}</div>
             </div>
             <div className="input-data">
-              <input type="text" required placeholder="Enter your Last Name" />
+              <input
+                type="text"
+                name="last_name"
+                value={formData.last_name}
+                onChange={handleInputChange}
+                required
+                placeholder="Enter your Last Name"
+              />
               <div className="underline"></div>
-              <label htmlFor="" className="formlabel"></label>
+              <label htmlFor="last_name" className="formlabel"></label>
+              <div className="error-message">{formErrors.last_name}</div>
             </div>
           </div>
           <div className="form-row">
             <div className="input-data">
               <input
-                type="text"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 required
                 placeholder="Enter your Email Address"
               />
               <div className="underline"></div>
-              <label htmlFor="" className="formlabel"></label>
+              <label htmlFor="email" className="formlabel"></label>
+              <div className="error-message">{formErrors.email}</div>
             </div>
             <div className="input-data">
               <input
                 type="text"
+                name="workplace"
+                value={formData.workplace}
+                onChange={handleInputChange}
                 required
-                placeholder="Enter your Website Name"
+                placeholder="Enter your Workplace"
               />
-              <label htmlFor="" className="formlabel"></label>
+              <label htmlFor="workplace" className="formlabel"></label>
+              <div className="error-message">{formErrors.workplace}</div>
             </div>
           </div>
-          <div className="form-row formlabel">
-            <div className="input-data textarea formlabel">
-              <textarea
-                rows="8"
-                cols="80"
+          <div className="form-row">
+            <div className="input-data">
+              <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleInputChange}
                 required
-                placeholder="Write your message"
-              ></textarea>
-              <br />
-              <div className="underline formlabel"></div>
-              <label htmlFor="" className="formlabel"></label>
-              <br />
-              <div className="form-row submit-btn aloo">
-                <div className="input-data">
-                  <div className="inner"></div>
-                  <input type="submit" value="Submit" />
-                </div>
-              </div>
+                placeholder="Enter your City"
+              />
+              <div className="underline"></div>
+              <label htmlFor="city" className="formlabel"></label>
+              <div className="error-message">{formErrors.city}</div>
             </div>
+            <div className="input-data">
+              <input
+                type="text"
+                name="github"
+                value={formData.github}
+                onChange={handleInputChange}
+                required
+                placeholder="Enter your GitHub ID"
+              />
+              <label htmlFor="github" className="formlabel"></label>
+              <div className="error-message">{formErrors.github}</div>
+            </div>
+          </div>
+          <div className="mybutton">
+            <button className="btn" type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>
