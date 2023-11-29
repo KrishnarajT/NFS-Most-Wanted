@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 import "../Button/Button.css";
-import Button from "../Button/Button";
 const Form = () => {
   const navigate = useNavigate();
 
@@ -52,7 +51,7 @@ const Form = () => {
       // Add logic to send data to the server or perform other actions
 
       // Redirect to "/summary" after successful form submission
-      navigate("/summary");
+      navigate("/Summary");
     } else {
       console.log("Form is not valid. Please check the errors.");
     }
