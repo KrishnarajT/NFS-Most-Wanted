@@ -3,12 +3,14 @@ from dateutil.parser import parse
 from datetime import datetime
 
 def get_github_info(username):
+    print("trying username: ", username)
     base_url = "https://api.github.com/users/"
     
     # Get user info
     user_url = base_url + username
     user_response = requests.get(user_url)
     user_info = user_response.json()
+    print(user_info)
     join_year = parse(user_info['created_at']).year
     
     # Get followers
@@ -29,6 +31,23 @@ def get_github_info(username):
     
     return [followers, following, join_year, active_years]
 
+def get_github_people_images(people):
+    
+    # edge case handling
+    if not people:
+        return []
+    
+    images = []
+    for person in people:
+        base_url = "https://api.github.com/users/"
+
+        # Get user info
+        user_url = base_url + person
+        user_response = requests.get(user_url)
+        user_info = user_response.json()
+        images.append(user_info['avatar_url'])
+    
+    return images
 # # Example usage:
 # followers, following, join_year, active_years = get_github_info('KrishnarajT')
 # print("Followers:", followers)

@@ -10,10 +10,9 @@ from trainers.run_guess_gender import guess_gender
 
 from web_scrappers.dork_sites import get_google_links
 from web_scrappers.get_google_images import get_google_images
-from web_scrappers.github_scrapper import get_github_info
+from web_scrappers.github_scrapper import get_github_info, get_github_people_images
 from web_scrappers.make_blob_by_scrapping import make_blob_by_scrapping
 from web_scrappers.breachdirApi import get_breach_info
-
 
 router = APIRouter(
         prefix = "/train",
@@ -52,38 +51,53 @@ def start_train_dork_sites( Data: TrainModelInputModel ) :
         train_field_classifier()
         
         # get google links
-        google_links = get_google_links( first_name, last_name, city, workplace, email, github )
-        print( f"Google links: {google_links}" )
+        # google_links = get_google_links( first_name, last_name, city, workplace, email, github )
+        # print( f"Google links: {google_links}" )
         
         # get images links
-        images_links = get_google_images( first_name, last_name, city, workplace, email, github )
+        # images_links = get_google_images( first_name, last_name, city, workplace, email, github )
         
         # get github stuff
         [ followers, following, join_year, active_years ] = get_github_info( github )
         
         associated_people = following + followers
         
+        # get github people images
+        # images_links += get_github_people_images( associated_people )
+        
         # make blob from scrapping all links we got from google
-        blob = make_blob_by_scrapping( google_links )
+        # blob = make_blob_by_scrapping( google_links )
         
         # get profession from blob
-        profession = get_profession_from_blob( blob )
+        # profession = get_profession_from_blob( blob )
         
         # get gender from model
         gender = guess_gender( first_name )
         
         # get breaches
         breaches = get_breach_info( email )
+        images_links = []
+        
+        # print everything
+        print( f"Images links: {images_links}" )
+        print( f"Followers: {followers}" )
+        print( f"Following: {following}" )
+        print( f"Join year: {join_year}" )
+        print( f"Active years: {active_years}" )
+        print( f"Associated people: {associated_people}" )
+        # print( f"Profession: {profession}" )
+        # print( f"Google links: {google_links}" )
+        
         
         # send a message with 200 status code, and a dictionary
         return HTMLResponse( content = {
-            "google_links" : google_links,
+            # "google_links" : google_links,
             "images_links" : images_links,
             "people" : associated_people,
             "active_years" : active_years,
             "join_year" : join_year,
             "gender" : gender,
-            "profession" : profession,
+            # "profession" : profession,
             "breaches" : breaches
         }, status_code = 200 )
     

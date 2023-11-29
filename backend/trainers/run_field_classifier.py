@@ -15,7 +15,7 @@ def run_field_classifier( input_word: str ) -> str :
     loaded_tfidf_vectorizer = joblib.load( tfidf_vectorizer_path )
     
     # Example usage after loading
-    input_word = input( "Enter a word: " )
+    # input_word = input( "Enter a word: " )
     tfidf_word = loaded_tfidf_vectorizer.transform( [ input_word ] )
     result = loaded_classifier.predict( tfidf_word )
     print( f"The word '{input_word}' is classified into the category: {result[ 0 ]}" )
