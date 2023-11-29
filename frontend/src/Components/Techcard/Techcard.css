@@ -13,7 +13,7 @@
     width: 1000px;
     position: relative;
     display: flex;
-    margin-right:  4rem;
+    margin-right:  8rem;
     padding:2rem;
     
 }
@@ -32,7 +32,7 @@
 
 .techcontainer .techcard .techface.techface1 {
     position: relative;
-    background: #333;
+    background: #232524;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@
     transform: translateY(100px);
 }
 .techcard{
-    margin-right:2rem;
+    margin-right:1rem;
 
 }
 .techcontainer .techcard:hover .techface.techface1 {
@@ -58,8 +58,8 @@
 }
 
 .techcontainer .techcard .techface.techface1 .techcontent img {
-    max-width: 180px;
-    height: 150px;
+    max-width: 200px;
+    height: 160px;
     border-radius: 40px;
 }
 
@@ -109,7 +109,7 @@
 }
 .techcontent .description{
     filter: none;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
 
 }

@@ -19,8 +19,10 @@ const Techcard = () => {
             <div class="techcontent">
               {" "}
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                cum cumque minus iste veritatis provident at.
+                React is a JavaScript library widely used for building
+                component-based architecture and virtual DOM enable efficient
+                rendering, providing a seamless user experience for interactive
+                AI-driven interfaces.
               </p>
             </div>
           </div>
@@ -35,8 +37,9 @@ const Techcard = () => {
           <div class="techface techface2">
             <div class="techcontent">
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                cum cumque minus iste veritatis provident at.
+                FastAPI, a modern, fast , web framework for building APIs with
+                Python 3.7+ based on standard Python type hints, is an excellent
+                choice for backend development in AIML projects.
               </p>
             </div>
           </div>
@@ -51,8 +54,9 @@ const Techcard = () => {
           <div class="techface techface2">
             <div class="techcontent">
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                cum cumque minus iste veritatis provident at.
+                Python serves as the foundational language for AIML development,
+                offering a rich ecosystem of libraries and frameworks. Its
+                simplicity and readability make it an ideal choice
               </p>
             </div>
           </div>

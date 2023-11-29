@@ -3,6 +3,9 @@ import Navbar from "../Components/Navbar/Navbar";
 import Card from "../Components/Card/Card";
 import "./About.css";
 import Techcard from "../Components/Techcard/Techcard";
+import Projectdesc from "../Components/Projectdesc/Projectdesc.jsx";
+import Projectdesc2 from "../Components/Projectdesc2/Projectdesc2.jsx";
+
 const About = () => {
   return (
     <div>
@@ -44,9 +47,19 @@ const About = () => {
         </section>
         <section>
           <h1 className="about-heading">Go ahead...</h1>
+          <div>
+            <p>
+              <Projectdesc />
+            </p>
+          </div>
         </section>
         <section>
           <h1 className="about-heading">Keep scrolling...</h1>
+          <div>
+            <p>
+              <Projectdesc2 />
+            </p>
+          </div>
         </section>
         <section>
           <h1 className="about-heading">Ok, thats it.</h1>
