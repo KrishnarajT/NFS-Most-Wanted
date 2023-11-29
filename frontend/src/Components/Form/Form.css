@@ -170,3 +170,9 @@ ontainer .text {
   background-color: #9f01ea;
   color: white;
 }
+.formtext {
+  margin-left:18rem;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+}

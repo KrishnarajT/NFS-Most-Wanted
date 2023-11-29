@@ -61,7 +61,7 @@ const Form = () => {
   return (
     <div className="formbody">
       <div className="formcontainer">
-        <div className="text">Contact us Form</div>
+        <div className="formtext">Wanna Find something Crazy?</div>
         <form className="form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="input-data">
