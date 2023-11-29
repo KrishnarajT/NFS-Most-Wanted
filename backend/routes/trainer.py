@@ -12,7 +12,7 @@ from web_scrappers.dork_sites import get_google_links
 from web_scrappers.get_google_images import get_google_images
 from web_scrappers.github_scrapper import get_github_info
 from web_scrappers.make_blob_by_scrapping import make_blob_by_scrapping
-
+from web_scrappers.breachdirApi import get_breach_info
 
 
 router = APIRouter(
@@ -59,7 +59,7 @@ def start_train_dork_sites( Data: TrainModelInputModel ) :
         images_links = get_google_images( first_name, last_name, city, workplace, email, github )
         
         # get github stuff
-        [followers, following, join_year, active_years] = get_github_info( github )
+        [ followers, following, join_year, active_years ] = get_github_info( github )
         
         associated_people = following + followers
         
@@ -72,6 +72,9 @@ def start_train_dork_sites( Data: TrainModelInputModel ) :
         # get gender from model
         gender = guess_gender( first_name )
         
+        # get breaches
+        breaches = get_breach_info( email )
+        
         # send a message with 200 status code, and a dictionary
         return HTMLResponse( content = {
             "google_links" : google_links,
@@ -79,8 +82,9 @@ def start_train_dork_sites( Data: TrainModelInputModel ) :
             "people" : associated_people,
             "active_years" : active_years,
             "join_year" : join_year,
-            "gender": gender,
-            "profession": profession
+            "gender" : gender,
+            "profession" : profession,
+            "breaches" : breaches
         }, status_code = 200 )
     
     except Exception as e :
