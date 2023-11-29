@@ -21,9 +21,7 @@ const Card3 = () => {
           </p>
           <div className="flex-row">
             <div className="time-left">
-              <h2>
-                20 requests / month <br></br>without support
-              </h2>
+              <h2>20 requests / month without support</h2>
             </div>
           </div>
         </main>
@@ -47,7 +45,7 @@ const Card3 = () => {
           </h1>
           <p>
             Our Software Solution provides Digital Awareness and Security to you
-            for Free!
+            for Free.To support us in our Endeavour Donate here.
           </p>
           <div className="flex-row">
             <div className="coin-base">

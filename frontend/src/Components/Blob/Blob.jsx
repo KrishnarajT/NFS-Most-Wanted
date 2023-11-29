@@ -9,14 +9,11 @@ const Blob = () => {
         <span></span>
         <span></span>
         <div className="blobcontent">
-          <h2>Empowering Decision-Making through Intelligent Insights:</h2>
+          <h2>Empowering Decision Making through Intelligent Insights:</h2>
           <p className="text">
             Envision your AIML project as a tool that empowers individuals or
             organizations by providing intelligent insights for better
-            decision-making. Whether it's in the realm of business, healthcare,
-            or any other domain, the project aims to harness the power of AI and
-            ML to deliver actionable and data-driven recommendations, ultimately
-            enhancing the quality of decisions made.
+            decision-making.
           </p>
         </div>
       </div>
@@ -32,9 +29,6 @@ const Blob = () => {
             problem-solving within a specific industry or field. Express the
             vision of leveraging AI and ML to tackle complex challenges, driving
             advancements, and fostering a culture of continuous improvement.
-            This could involve developing cutting-edge algorithms, predictive
-            models, or automation solutions that contribute to the evolution of
-            practices within the chosen domain.
           </p>
         </div>
       </div>
@@ -49,11 +43,7 @@ const Blob = () => {
             Emphasize a commitment to ethical AI practices and inclusivity in
             your project's vision. Highlight the importance of developing AI
             models and systems that prioritize fairness, transparency, and
-            accountability. Consider the ethical implications of the data used,
-            potential biases in algorithms, and the overall impact on diverse
-            user groups. Strive to create a project that not only achieves
-            technical excellence but also aligns with ethical standards and
-            societal values.
+            accountability.
           </p>
         </div>
       </div>
