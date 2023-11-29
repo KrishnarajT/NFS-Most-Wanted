@@ -5,10 +5,16 @@ from pydantic import BaseModel
 
 # import models, trainers and scrappers.
 from trainers.train_field_classifier import train_field_classifier
-from trainers.run_field_classifier import run_field_classifier
+from trainers.run_field_classifier import get_profession_from_blob
+from trainers.run_guess_gender import guess_gender
+
 from web_scrappers.dork_sites import get_google_links
 from web_scrappers.get_google_images import get_google_images
-from web_scrappers.github_scrapper import get_github_people, get_github_years_active
+from web_scrappers.github_scrapper import get_github_info
+from web_scrappers.make_blob_by_scrapping import make_blob_by_scrapping
+
+
+
 router = APIRouter(
         prefix = "/train",
         tags = [ "Train" ]
@@ -53,19 +59,28 @@ def start_train_dork_sites( Data: TrainModelInputModel ) :
         images_links = get_google_images( first_name, last_name, city, workplace, email, github )
         
         # get github stuff
-        associated_people = get_github_people( github )
-        years_active = get_github_years_active( github )
+        [followers, following, join_year, active_years] = get_github_info( github )
         
-        # get profession from model
-        profession =
+        associated_people = following + followers
+        
+        # make blob from scrapping all links we got from google
+        blob = make_blob_by_scrapping( google_links )
+        
+        # get profession from blob
+        profession = get_profession_from_blob( blob )
+        
+        # get gender from model
+        gender = guess_gender( first_name )
         
         # send a message with 200 status code, and a dictionary
         return HTMLResponse( content = {
-            "google_links": google_links,
-            "images_links": images_links,
-            "people": associated_people,
-            "years_active": years_active,
-            "profession":
+            "google_links" : google_links,
+            "images_links" : images_links,
+            "people" : associated_people,
+            "active_years" : active_years,
+            "join_year" : join_year,
+            "gender": gender,
+            "profession": profession
         }, status_code = 200 )
     
     except Exception as e :
