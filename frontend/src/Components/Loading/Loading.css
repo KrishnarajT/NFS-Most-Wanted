@@ -43,11 +43,13 @@
   }
   
   .summarybody {
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Quicksand';
     margin-top: 2rem;
+    margin-left: 40rem;
   }
   
   .loading-count {

@@ -17,13 +17,13 @@ const Loading = () => {
       loadingCircle.style.background = `conic-gradient(from 0deg at 50% 50%, rgba(111, 123, 247, 1) 0%, rgba(155, 248, 244, 1) ${load}%, #101012 ${load}%)`;
     };
 
-    const interval = setInterval(updateLoader, 150);
+    const interval = setInterval(updateLoader, 100);
 
     // Hide the loading box after 15 seconds
     const timeout = setTimeout(() => {
       setIsVisible(false);
       clearInterval(interval);
-    }, 15000);
+    }, 13000);
 
     return () => {
       clearInterval(interval);

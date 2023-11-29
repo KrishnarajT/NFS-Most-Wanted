@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import vid from "../../Resources/Videos/bgvid.mp4";
+import vid from "../../Resources/Videos/bg1.mp4";
 import "../Landing/Landing.css";
 const Landing = () => {
   const navigate = useNavigate();
