@@ -33,3 +33,5 @@ def train_field_classifier():
     # Save the trained model to a file
     joblib.dump( classifier, classifier_path )
     joblib.dump( tfidf_vectorizer, tfidf_vectorizer_path )
+
+# train_field_classifier()

@@ -1,7 +1,6 @@
 import joblib
 import os
 
-
 def run_field_classifier( input_word: str ) -> str :
     # classifier path
     classifier_path = os.path.join( os.path.dirname( __file__ ), '../models/category_classifier_model.joblib' )
@@ -18,11 +17,12 @@ def run_field_classifier( input_word: str ) -> str :
     # input_word = input( "Enter a word: " )
     tfidf_word = loaded_tfidf_vectorizer.transform( [ input_word ] )
     result = loaded_classifier.predict( tfidf_word )
-    print( f"The word '{input_word}' is classified into the category: {result[ 0 ]}" )
+    # print( f"The word '{input_word}' is classified into the category: {result[ 0 ]}" )
     return result[ 0 ]
 
 
 def get_profession_from_blob( blob: str ) -> str :
+    print(blob)
     # get words from blob
     words = blob.split( " " )
     # get profession for all words in the blob, and maintain a list
@@ -33,3 +33,8 @@ def get_profession_from_blob( blob: str ) -> str :
     profession = max( set( professions ), key = professions.count )
     
     return profession
+
+# # Example usage
+# blob = "Science"
+# profession = get_profession_from_blob( blob )
+# print( f"Profession: {profession}" )
