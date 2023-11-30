@@ -2,7 +2,7 @@ import React from "react";
 import "./Techcard.css";
 import fast from "../../Resources/Images/fast.png";
 import reactimg from "../../Resources/Images/react.png";
-import pyimg from "../../Resources/Images/py.png";
+import pyimg from "../../Resources/Images/python.png";
 
 const Techcard = () => {
   return (
