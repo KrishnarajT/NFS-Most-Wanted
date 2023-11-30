@@ -1,12 +1,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-body {
-    overflow: hidden;
-  }
+
   
 .bg {
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 video {
@@ -18,16 +17,16 @@ video {
 
 .content {
     background-color: rgba(0, 0, 0, 0);
-    margin-left: 8rem;
+    margin-left: 12rem;
     position: absolute;
     display: flex;
     top: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Mostwasted', sans-serif;
+    font-family: 'Mostwasted', sans-serif!important;
     opacity: 0;
-    animation: appear 0.5s ease-in-out 7s forwards;
+    animation: appear 0.5s ease-in-out 9s forwards;
     color:white;
 }
 
@@ -35,33 +34,30 @@ video {
     margin-top: 1rem;
     font-size: 140px;
     margin-right: 8rem;
+    color: white;
     text-shadow: 0 0 10px #ff6bff;
-    -webkit-text-stroke: 2px #ff6bff; 
+
 
 }
 
 .content h1 {
-    font-size: 95px;
+    font-family: 'Mostwasted', sans-serif!important;
+    font-size: 100px;
     color: white;
     text-shadow: 0 0 10px #ff6bff;
-    -webkit-text-stroke: 2px #ff6bff; 
     background-color: rgba(0, 0, 0, 0);
-    margin-right: 8rem;
+    margin-right: 3rem;
     font-size: 100px;
 }
 
-.content h1 {
-  
-
-}
 
 .desc{
     background-color: rgba(0, 0, 0, 0);
-    margin-right: 8rem;
+    margin-right: 4rem;
     font-size: 40px;
     color: white;
     font-family: "Audiowide", cursive;
-    -webkit-text-stroke: 2px #ff6bff; 
+    text-shadow: 0 0 10px #ff6bff;
 
 }
 .word .menu {
@@ -147,14 +143,13 @@ video {
 	text-shadow: -0.01em -0.01em 0.01em #000;
 	animation: rise 2s ease-in-out 0.5s forwards;
     font-family: "Audiowide", cursive;
-    margin-left: 5rem;
+    margin-left: 6rem;
     margin-right:6rem ;
     margin-top: 1rem;
     opacity: 0;
     animation: appear 0.5s ease-in-out 7s forwards;
     background-color: rgba(0,0,0,0);
     filter: drop-shadow(0 0 0px rgba(	255, 255, 255,1));
-    -webkit-text-stroke: 2px #000; 
     font-weight: 500;
     color: white;
     transition: transform 0.3s ease-in-out;
@@ -167,7 +162,7 @@ video {
 
   #lastopt
   {
-    margin-left:4rem;
+    margin-left:5rem;
     background-color: rgba(0,0,0,0);
 
   }

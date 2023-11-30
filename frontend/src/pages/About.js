@@ -1,22 +1,24 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Card from "../Components/Card/Card";
-import "./About.css";
+import "./About.css"; // Import the CSS file
 import Techcard from "../Components/Techcard/Techcard";
+import Projectdesc from "../Components/Projectdesc/Projectdesc.jsx";
+
 const About = () => {
   return (
-    <div>
+    <div className="aboutfullbody">
       <Navbar></Navbar>
       <div className="aboutbody">
-        <div className="Devscard">
+        <div className="devscard-container">
           <Card></Card>
         </div>
       </div>
 
-      <div className=" about section-container">
+      <div className="project-section" id="prob">
         <section>
-          <h1 className="about-heading"> Credits and Thanks</h1>
-          <div>
+          <h1 className="project-heading"> Credits and Thanks</h1>
+          <div class="midtext">
             <br />
             <br />
             <p>
@@ -31,26 +33,21 @@ const About = () => {
               <br></br>
               <br></br>
               We are also grateful to our friends, for their inputs on the looks
-              and features of the website, and for constantly encourating us to
+              and features of the website, and for constantly encouraging us to
               keep going.
             </p>
           </div>
         </section>
+      </div>
+
+      <div className="technology-section">
         <section>
           <h1 className="about-heading"> Technology Stack:</h1>
-          <p>
-            <Techcard />
-          </p>
+          <Techcard />
         </section>
-        <section>
-          <h1 className="about-heading">Go ahead...</h1>
-        </section>
-        <section>
-          <h1 className="about-heading">Keep scrolling...</h1>
-        </section>
-        <section>
-          <h1 className="about-heading">Ok, thats it.</h1>
-        </section>
+      </div>
+      <div className="go-ahead-section">
+        <Projectdesc />
       </div>
     </div>
   );
