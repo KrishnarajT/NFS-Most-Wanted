@@ -58,7 +58,7 @@ const Wheel = () => {
           ></button>
           <div>
             <a className="rise" href="Features">
-              Performance
+              Key Features
             </a>
           </div>
         </div>

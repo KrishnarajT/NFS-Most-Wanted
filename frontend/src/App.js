@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Vision from "./pages/Vision";
 import Search from "./pages/Search";
 import Summary from "./pages/Summary";
+import Features from "./pages/Features";
 import "../../frontend/src/App.css";
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/About_us" element={<About />} />
-          <Route path="/Features" />
+          <Route path="/Features" element={<Features />} />
           <Route path="/Search" element={<Search />} />
           <Route path="/Summary" element={<Summary />} />
           <Route path="/Vision" element={<Vision />} />
