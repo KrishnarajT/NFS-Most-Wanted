@@ -8,50 +8,55 @@ const Timeline = () => {
         <ul className="line">
           <li>
             <div className="cont">
-              <h3>title here</h3>
+              <h3>Why name it NFS MOSTWANTED?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                sit amet nulla blandit, sodales odio quis, semper nisi.
+                Its a racing game launched on 30 October 2012 Its an integral
+                part of your childhood and the Abbreviation Need For Security
+                aligns with our vision
               </p>
               <time>16 nov, 2016</time>
             </div>
           </li>
           <li>
             <div className="cont">
-              <h3>title here</h3>
+              <h3>What it does?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                sit amet nulla blandit, sodales odio quis, semper nisi.
+                We provide you with the opportunity to have a look at your
+                Digital Footprint and bring out information publicly available
+                about you.
               </p>
               <time>16 nov, 2016</time>
             </div>
           </li>
           <li>
             <div className="cont">
-              <h3>title here</h3>
+              <h3>How does it work?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                sit amet nulla blandit, sodales odio quis, semper nisi.
+                We are using BeautifulSoup (Bs4) to webscrap information based
+                on the details you provide and train a ML model using Scikit
+                learn and naive bayes algorithm.
               </p>
               <time>16 nov, 2016</time>
             </div>
           </li>
           <li>
             <div className="cont">
-              <h3>title here</h3>
+              <h3>What information can you get from us?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                sit amet nulla blandit, sodales odio quis, semper nisi.
+                We are Currently under Development and can find the gender and
+                occupation and find images related to the information you give
+                us.
               </p>
               <time>16 nov, 2016</time>
             </div>
           </li>
           <li>
             <div className="cont">
-              <h3>title here</h3>
+              <h3>Future Scope?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                sit amet nulla blandit, sodales odio quis, semper nisi.
+                We plan on creating the most versatile web application which
+                would find everything and anything available about a person
+                making it a Forensic tool.We are currently short of FUNDS
               </p>
               <time>16 nov, 2016</time>
             </div>
