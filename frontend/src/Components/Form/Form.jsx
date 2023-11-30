@@ -1,9 +1,9 @@
-// Form.jsx
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./Form.css";
 import "../Button/Button.css";
+
 const Form = () => {
   const navigate = useNavigate();
 
@@ -42,16 +42,31 @@ const Form = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate the form
     if (validateForm()) {
-      // Access the form data in the 'formData' state variable
-      console.log("Form Data:", formData);
-      // Add logic to send data to the server or perform other actions
+      try {
+        // Send form data as JSON to the server
+        const response = await axios.post(
+          "http://localhost:8000/submit",
+          formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-      // Redirect to "/summary" after successful form submission
-      navigate("/Summary");
+        // Handle the response from the server, if needed
+        console.log("Server response:", response.data);
+
+        // Redirect to "/summary" after successful form submission
+        navigate("/Summary");
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        // Handle the error, show a message to the user, etc.
+      }
     } else {
       console.log("Form is not valid. Please check the errors.");
     }
