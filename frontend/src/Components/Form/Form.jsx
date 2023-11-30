@@ -20,6 +20,9 @@ const Form = () => {
   // State to manage form errors
   const [formErrors, setFormErrors] = useState({});
 
+  // State to hold the response from the POST request
+  const [postResponse, setPostResponse] = useState(null);
+
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,30 +45,43 @@ const Form = () => {
   };
 
   // Handle form submission
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let response;
     // Validate the form
     if (validateForm()) {
       try {
         // Send form data as JSON to the server
-        const response = await axios.post(
-          "http://localhost:8000/submit",
-          formData,
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        response = await axios.post("http://localhost:8000/submit", formData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        console.log(response);
 
-        // Handle the response from the server, if needed
-        console.log("Server response:", response.data);
-
-        // Redirect to "/summary" after successful form submission
-        navigate("/Summary");
+        // Instead of extracting specific fields from response.data,
+        // send the entire response.data object to the "/Summary" page
+        navigate("/Summary", { state: { responseData: response.data } });
       } catch (error) {
         console.error("Error submitting form:", error);
-        // Handle the error, show a message to the user, etc.
+        response = {
+          gender: "Male",
+          profession: "Arts",
+          images_links: [
+            "/images/branding/searchlogo/1x/googlelogo_desk_heirloom_color_150x55dp.gif",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWAQVvd5YZz0viFU9zHyYwu64yecsCgLwp8lQ6-wmm-zW2Zg3MhL7zNwZPuXM&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDs0EEB5Y2Hz0JzS-r-6sEL2abXXLS9zRFlvHHIF0c47Qa8xgAIdp61y4fV3w&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm1lk3_vMQjZpLBXxVvNITpDbzQWYZEWkVi2g7fcn-FJYAW-3aYqMMtz2mYlE&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh5Hq38epmFrKef8KQgL2_x8IsuaKlvcX3CF7vD-37ksoEZ1_e2-S0vwNMfA&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2PyIS_-vOZih-UTpqeCCjM28S70_9xspnCODmpb3PkMu5DoLZzfRFDixUYe4&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXL-JTR9kiTbkVJqEfccqog1dgNpn0fp0-YGdV-5Ymr8TLdsoMkr_Kars1IrI&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGFDoRSWlxozIdDds_a54kQucUuTKPoFwYIGDeSSGb8fQh80rooYNxZxrxQ&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaG8ZyXS-oPscs-olAidA-_U2BXwAozsVGLEsKgKUWIqPXFywPkHSLYGfcnA&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR01LARAUiTiMC3LnVPq_gexxcT7pN6nO6rFAWuQJyEyJVB7SyqP_eWQ-H951A&s",
+          ],
+        };
+        navigate("/Summary", { state: { responseData: response } });
       }
     } else {
       console.log("Form is not valid. Please check the errors.");
