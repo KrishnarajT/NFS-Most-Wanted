@@ -32,7 +32,7 @@ const Card = () => {
           </div>
           <div className="details">
             <h2>
-              Krishnaraj Thadesar
+              Krishnaraj
               <br />
               <span>Qatari</span>
             </h2>

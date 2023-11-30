@@ -8,7 +8,7 @@ const Techcard = () => {
   return (
     <div className="techcardbodycontainer">
       <div class="techcontainer">
-        <div class="techcard">
+        <div class="techcard" id="card1">
           <div class="techface techface1">
             <div class="techcontent">
               <img src={reactimg} />

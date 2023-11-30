@@ -29,6 +29,9 @@ const Projectdesc = () => {
           </li>
         </ul>
       </section>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <section className="project-section">
         <h2 className="project-heading">

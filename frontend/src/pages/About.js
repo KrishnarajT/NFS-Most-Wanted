@@ -15,10 +15,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="credits-section">
+      <div className="project-section" id="prob">
         <section>
-          <h1 className="about-heading"> Credits and Thanks</h1>
-          <div>
+          <h1 className="project-heading"> Credits and Thanks</h1>
+          <div class="midtext">
             <br />
             <br />
             <p>
@@ -46,7 +46,6 @@ const About = () => {
           <Techcard />
         </section>
       </div>
-
       <div className="go-ahead-section">
         <Projectdesc />
       </div>
