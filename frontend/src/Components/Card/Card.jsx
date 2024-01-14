@@ -65,58 +65,58 @@ const Card = () => {
       </div>
       <div className="iconsabout">
         <div className="parth dev1">
-          <a href="/">
+          <a href="+91 8796180288">
             <FaSquarePhone size="2.5rem" color="white" />
           </a>
-          <a href="https://github.com/KrishnarajT">
+          <a href="https://github.com/Parth4123">
             <FaGithub size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="mailto:parthzarekar@gmail.com">
             <FaSquareEnvelope size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://wa.link/biyqac">
             <FaSquareWhatsapp size="2.5rem" color="white" />
           </a>
         </div>
-        <div className="parth dev1">
-          <a href="/">
+        <div className="krishnaraj   dev1">
+          <a href="+91 9834312135">
             <FaSquarePhone size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://www.github.com/KrishnarajT">
             <FaGithub size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="mailto:kpt.krishnaraj@gmail.com">
             <FaSquareEnvelope size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://wa.link/zu05s5">
             <FaSquareWhatsapp size="2.5rem" color="white" />
           </a>
         </div>
         <div className="Saubhagya dev1">
-          <a href="/">
+          <a href="+91 7007084088">
             <FaSquarePhone size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://www.github.com/SaubhagyaSingh">
             <FaGithub size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="mailto: saubhagyasingh65@gmail.com">
             <FaSquareEnvelope size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://wa.link/vphagl">
             <FaSquareWhatsapp size="2.5rem" color="white" />
           </a>
         </div>
         <div className="karad dev1">
-          <a href="/">
+          <a href="+91 6281819844">
             <FaSquarePhone size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://github.com/sourab777karad">
             <FaGithub size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="mailto: karadsaisourab9@gmail.com">
             <FaSquareEnvelope size="2.5rem" color="white" />
           </a>
-          <a href="/">
+          <a href="https://wa.me/qr/XXI2PFLHKZH6G1">
             <FaSquareWhatsapp size="2.5rem" color="white" />
           </a>
         </div>

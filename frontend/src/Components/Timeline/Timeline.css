@@ -89,8 +89,8 @@ ul{list-style: none}
   background-color: #7ab800;
   color: #fff;
   position:absolute;
-  -webkit-transition: transform 1s linear;
-  transition: transform 1s linear
+  -webkit-transition: transform 1.5s linear;
+  transition: transform 1.5s linear
 }
 
 #timeline ul li:nth-child(2):after
@@ -171,7 +171,7 @@ ul{list-style: none}
 
 #timeline ul li:last-child .cont
 {
-  color: #6e2585
+  color: #a608d6
 }
 
 #timeline ul li:nth-child(odd):hover .cont
@@ -264,8 +264,8 @@ ul{list-style: none}
 {
   -webkit-transform: rotateZ(360deg);
   transform: rotateZ(360deg);
-  -webkit-transition: transform 1s linear;
-  transition: transform 1s linear
+  -webkit-transition: transform 1.5s linear;
+  transition: transform 1.5s linear
 }
 
 #timeline ul li:first-child .cont{ border-color: #7ab800}
